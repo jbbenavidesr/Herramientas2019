@@ -1,6 +1,19 @@
 #include<iostream>
 #include<cmath>
 
+//Declaracion de funciones
+bool es_primo(int x);
+int sum_primos(int min, int max);
+
+
+//-------Main------
+int main(void){
+    int i, max = 100, min= 50 , sum = 0;
+
+    std::cout<<sum_primos(min, max)<<"\n";
+
+    return 0;
+}
 
 //------ Funciones-----
 bool es_primo(int x){
@@ -18,10 +31,8 @@ bool es_primo(int x){
     return esprimo;
 }
 
-
-//-------Main------
-int main(void){
-    int i, max = 100, min= 50 , sum = 0;
+int sum_primos(int min, int max){
+    int i, sum = 0;
     bool esprimo;
 
     for(i=min; i<max; i++){
@@ -30,7 +41,5 @@ int main(void){
             sum += i;
         }
     }
-    std::cout<<sum<<"\n";
-
-    return 0;
+    return sum;
 }
