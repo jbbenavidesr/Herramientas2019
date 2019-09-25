@@ -1,0 +1,1 @@
+double suma2(int N);
